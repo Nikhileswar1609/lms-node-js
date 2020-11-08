@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create an account</title>
+    <link rel="stylesheet" href="image.css">
+    <script>
+        function validate()
+        {
+            var result=true;
+            var e=document.getElementsByName("email")[0].value;
+            var atindex=e.indexOf('@');
+            var dotindex=e.lastIndexOf('.');
+            if(atindex<1 || dotindex>=e.length-2 || dotindex-atindex<3)
+                {
+                result=false;
+            alert("Incorrect email id")
+                }
+            return(result);
+        }
+    </script>
+</head>
+<body>
+<h1 style="text-align:center"><img src="lms1.jpg" style="width:500px;height:200px;"></h1>
+    <form action="home page.html" method="post" onsubmit="return validate()">
+<table bgcolor="red" border="2px" cellpadding="4px" align="center" width="300px" height="300px">
+<tr>
+<td>User Name</td>
+<td><input type="text" name="username" required></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" name="email"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" placeholder="Atleast 6 digit" required></td>
+</tr>
+<tr>
+<td>Re-enter Password</td>
+<td><input type="password" name="reenterpassword" placeholder="Atleast 6 digt" required></td>
+</tr>
+</table>
+<center><input type="submit" value="Register" href="home page.html"></center>
+
+    </form>
+</body>
+</html>
